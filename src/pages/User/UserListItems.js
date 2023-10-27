@@ -21,7 +21,7 @@ const handleLogout = () => {
         if (result.isConfirmed) {
             // Perform the logout action here
             if (result.isConfirmed) {
-                window.location.href = '/'; // Redirect to the home page after logout
+                window.location.href = process.env.PUBLIC_URL || '/';// Redirect to the home page after logout
             }
         }
     });
