@@ -21,7 +21,7 @@ const handleLogout = () => {
         if (result.isConfirmed) {
             // Perform the logout action here
             if (result.isConfirmed) {
-                window.location.href = 'https://ruturaj220.github.io/quiz-app-frontend/'; // Redirect to the home page after logout
+                window.location.href = '/quiz-app-frontend/'; // Redirect to the home page after logout
             }
         }
     });
