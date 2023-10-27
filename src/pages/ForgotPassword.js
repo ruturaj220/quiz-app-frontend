@@ -51,7 +51,7 @@ const ForgotPassword = () => {
             return;
         }
         try {
-            const response = await axios.put(`http://localhost:8080/mail/updatePassword?email=${email}&otp=${otp}&newPassword=${newPassword}`);
+            const response = await axios.put(`https://quiz-app-backend-production-1b1c.up.railway.app/mail/updatePassword?email=${email}&otp=${otp}&newPassword=${newPassword}`);
             console.log(response.data);
             Swal.fire({
                 icon: 'success',
