@@ -38,7 +38,7 @@ function App() {
   return (
 
       <div>
-        <Router>
+        <Router basename="/quiz-app-frontend">
           <Routes>
             <Route path="/" element={<NonAdminLayout />}>
               {/* Non-admin routes */}
