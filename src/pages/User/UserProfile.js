@@ -71,7 +71,7 @@ function UserProfile() {
 
     useEffect(() => {
         axios
-            .get(`https://quiz-app-backend-production-1b1c.up.railway.app/${username}`)
+            .get(`https://quiz-app-backend-production-1b1c.up.railway.app/user/${username}`)
             .then((response) => {
                 setUserData(response.data);
             })
@@ -91,7 +91,7 @@ function UserProfile() {
 
     const handleSaveClick = () => {
         axios
-            .put(`https://quiz-app-backend-production-1b1c.up.railway.app/${userData.userId}`, editedData)
+            .put(`https://quiz-app-backend-production-1b1c.up.railway.app/user/${userData.userId}`, editedData)
             .then((response) => {
                 setUserData({ ...userData, ...editedData });
                 setIsEditing(false);

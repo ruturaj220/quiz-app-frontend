@@ -71,7 +71,7 @@ function AdminProfile() {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8080/user/${username}`)
+            .get(`https://quiz-app-backend-production-1b1c.up.railway.app/user/${username}`)
             .then((response) => {
                 setAdminData(response.data);
             })
@@ -92,7 +92,7 @@ function AdminProfile() {
 
     const handleSaveClick = () => {
         axios
-            .put(`http://localhost:8080/user/${adminData.userId}`, editedData)
+            .put(`https://quiz-app-backend-production-1b1c.up.railway.app/user/${adminData.userId}`, editedData)
             .then((response) => {
                 setAdminData({ ...adminData, ...editedData });
                 setIsEditing(false);
