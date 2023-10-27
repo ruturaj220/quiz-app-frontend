@@ -40,7 +40,7 @@ function App() {
       <div>
         <Router basename="/quiz-app-frontend">
           <Routes>
-            <Route path="/quiz-app-frontend" element={<NonAdminLayout />}>
+            <Route path="/" element={<NonAdminLayout />}>
               {/* Non-admin routes */}
                 <Route index element={<Home />} />
                 <Route path="signUp" element={<SignUp />} />
