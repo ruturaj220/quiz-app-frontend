@@ -4,13 +4,11 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LogoutIcon from '@mui/icons-material/Logout';
-import {Link, useNavigate } from "react-router-dom";
+import {Link} from "react-router-dom";
 import QuizIcon from '@mui/icons-material/Quiz';
 import Swal from "sweetalert2";
 import HomeIcon from "@mui/icons-material/Home";
 const handleLogout = () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const navigate = useNavigate();
     Swal.fire({
         title: 'Are you sure?',
         text: "You will be logged out of the system.",
@@ -23,7 +21,7 @@ const handleLogout = () => {
         if (result.isConfirmed) {
             // Perform the logout action here
             if (result.isConfirmed) {
-                navigate('/quiz-app-frontend/'); // Redirect to the home page after logout
+                window.location.href = '/quiz-app-frontend/'; // Redirect to the home page after logout
             }
         }
     });
