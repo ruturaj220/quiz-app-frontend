@@ -4,7 +4,6 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import AddCircleRoundedIcon from '@mui/icons-material/AddCircleRounded';
-import SlideshowIcon from '@mui/icons-material/Slideshow';
 import QuizIcon from '@mui/icons-material/Quiz';
 import SlideshowTwoToneIcon from '@mui/icons-material/SlideshowTwoTone';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';

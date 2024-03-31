@@ -121,7 +121,6 @@ const SignUp = () => {
                 }
             } catch (error) {
                 if (error.response) {
-                    const errorMessage = error.response.data.message;
                     if (error.response.status === 409) {
                         Swal.fire({
                             icon: 'error',
