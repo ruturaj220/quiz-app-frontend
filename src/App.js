@@ -16,6 +16,9 @@ import UserProfile from "./pages/User/UserProfile";
 import Quiz from "./pages/User/Quiz";
 import UserList from "./pages/Admin/UserList";
 import ForgotPassword from "./pages/ForgotPassword";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import RefundCancellationPolicy from "./pages/RefundCancellationPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
 
 function App() {
   function NonAdminLayout() {
@@ -45,6 +48,9 @@ function App() {
                 <Route index element={<Home />} />
                 <Route path="signUp" element={<SignUp />} />
                 <Route path="signIn" element={<SignIn />} />
+                <Route path="privacyPolicy" element={<PrivacyPolicy/>}/>
+                <Route path="RefundCancellationPolicy" element={<RefundCancellationPolicy/>}/>
+                <Route path="TermsAndConditions" element={<TermsAndConditions/>}/>
                 <Route path="forgotPassword" element={<ForgotPassword/>}/>
             </Route>
             <Route path="/admin" element={<AdminDashboard />}>
