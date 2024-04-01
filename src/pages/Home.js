@@ -30,9 +30,13 @@ const Home = () => {
     };
 
     const linkStyles = {
-        color: '#fff',
-        textDecoration: 'underline',
-        cursor: 'pointer',
+        margin: '0 10px',
+        textDecoration: 'none', // Remove default underline
+        color: 'black', // Change link color as needed
+        cursor: 'pointer', // Show pointer cursor on hover
+        // color: '#fff',
+        // textDecoration: 'underline',
+        // cursor: 'pointer',
         transition: 'color 0.3s ease', // Smooth transition for color change
         '&:hover': {
             color: '#ffd700', // Change color on hover
@@ -47,6 +51,7 @@ const Home = () => {
         boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
         color: '#333',
     };
+
 
     const courses = [
         { title: 'JAVA', description: 'Cross-platform object-oriented language' },
@@ -86,7 +91,7 @@ const Home = () => {
                 </div>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-around', width: '100%' }}>
                     <Link component="button" onClick={() => navigate('/privacyPolicy')} style={linkStyles}>
                         Privacy Policy
                     </Link>
@@ -97,7 +102,10 @@ const Home = () => {
                         Terms and Conditions
                     </Link>
                     <Link component="button" onClick={() => navigate('/contactUs')} style={linkStyles}>
-                        Contact Us
+                        Contact us
+                    </Link>
+                    <Link component="button" onClick={() => navigate('/aboutUs')} style={linkStyles}>
+                        About us
                     </Link>
                 </div>
             </div>

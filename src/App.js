@@ -20,6 +20,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import RefundCancellationPolicy from "./pages/RefundCancellationPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import Contact from "./pages/Contact";
+import About from "./pages/About";
 
 function App() {
   function NonAdminLayout() {
@@ -53,6 +54,7 @@ function App() {
                 <Route path="RefundCancellationPolicy" element={<RefundCancellationPolicy/>}/>
                 <Route path="TermsAndConditions" element={<TermsAndConditions/>}/>
                 <Route path="contactUs" element={<Contact/>}/>
+                <Route path="aboutUs" element={<About/>}/>
                 <Route path="forgotPassword" element={<ForgotPassword/>}/>
             </Route>
             <Route path="/admin" element={<AdminDashboard />}>
