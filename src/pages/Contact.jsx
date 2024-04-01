@@ -1,27 +1,25 @@
 import React from 'react';
 import './Contact.css';
+
 const ContactPage = () => {
-  return (
-    <div className="container">
-      <h1>Contact Us</h1>
-      <p>You can contact us via email at: <a href="mailto:example@example.com">unicorn@gmail.com</a></p>
-      
-      <form>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" name="name" required />
+    return (
+        <div className="container">
+            <h1>Contact Us</h1>
 
-        <label htmlFor="email">Email:</label>
-        <input type="email" id="email" name="email" required />
+            <div className="section">
+                <h2>General Inquiries & Support</h2>
+                <p>Email: <a href="mailto:e.learning@myyahoo.com">e.learning@myyahoo.com</a></p>
+                <p>Phone: +91-9739894834</p>
+            </div>
 
-        <label htmlFor="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
+            <div className="section">
+                <h2>Our Address</h2>
+                <p>Vidya Nagar, Behind the Police Station, Sadalga, Karnataka 591239</p>
+            </div>
 
-        <button type="submit">Submit</button>
-      </form>
-
-      <p>For more information, visit our <a href="https://www.example.com">unicorn</a>.</p>
-    </div>
-  );
+            <p>For more information, visit our <a href="https://e-learning-zeta-seven.vercel.app/">website</a>.</p>
+        </div>
+    );
 };
 
 export default ContactPage;

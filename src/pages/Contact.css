@@ -1,63 +1,22 @@
 .container {
-  max-width: 100%;
-  margin: 0 auto;
   padding: 20px;
 }
 
-h1 {
-  font-size: 24px;
+.section {
   margin-bottom: 20px;
 }
 
-form {
-  margin-bottom: 20px;
+.section h2 {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px;
 }
 
-.form-group {
-  margin-bottom: 15px;
+.section p {
+  margin-bottom: 5px;
 }
 
-label {
-  display: block;
-  font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 230px; /* Adjusted to compensate for the border */
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-button {
-  display: block; /* Ensures button is on its own line */
-  width: 100px; /* Makes button full width */
-  padding: 10px 20px;
-  margin-top: 10px; /* Adjust spacing */
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-p {
-  margin-bottom: 20px;
-}
-
-a {
+.section a {
   color: #007bff;
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }
