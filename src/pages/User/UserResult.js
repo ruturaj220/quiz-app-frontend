@@ -8,7 +8,11 @@ const UserResult = ({ quizId }) => {
     useEffect(() => {
         const fetchUserScore = async () => {
             try {
+<<<<<<< HEAD
                 const response = await axios.post(`http://localhost:8080/quiz/submit/${quizId}`, {
+=======
+                const response = await axios.post(`https://quiz-app-backend-production-1b1c.up.railway.app/quiz/submit/${quizId}`, {
+>>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
                     // Include the list of responses here if necessary
                 });
                 setUserScore(response.data);

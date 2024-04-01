@@ -68,7 +68,11 @@ const Quiz = () => {
 
     useEffect(() => {
         axios
+<<<<<<< HEAD
             .get('http://localhost:8080/quiz/getAllQuiz')
+=======
+            .get('https://quiz-app-backend-production-1b1c.up.railway.app/quiz/getAllQuiz')
+>>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
             .then((response) => {
                 setQuizzes(response.data);
             })
@@ -85,7 +89,11 @@ const Quiz = () => {
 
     const handleShowQuestions = async (quizId) => {
         try {
+<<<<<<< HEAD
             const response = await axios.get(`http://localhost:8080/quiz/getQuizQuestion/${quizId}`);
+=======
+            const response = await axios.get(`https://quiz-app-backend-production-1b1c.up.railway.app/quiz/getQuizQuestion/${quizId}`);
+>>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
             setQuizQuestions(response.data);
             setValues(new Array(response.data.length).fill(''));
             console.log(response.data);
@@ -137,7 +145,11 @@ const Quiz = () => {
         console.log("Submitting with the following responses:", responses);
 
         try {
+<<<<<<< HEAD
             const response = await axios.post(`http://localhost:8080/quiz/submit/${id}`, responses);
+=======
+            const response = await axios.post(`https://quiz-app-backend-production-1b1c.up.railway.app/quiz/submit/${id}`, responses);
+>>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
             console.log(response.data); // do something with the response if needed
             const { data: score } = response;
             if (response.status === 200) {
@@ -158,7 +170,11 @@ const Quiz = () => {
                     }).then(async (result) => {
                         if (result.isConfirmed) {
                             // Retrieve the email from the user profile
+<<<<<<< HEAD
                             const userProfileResponse = await axios.get(`http://localhost:8080/user/${username}`);
+=======
+                            const userProfileResponse = await axios.get(`https://quiz-app-backend-production-1b1c.up.railway.app/user/${username}`);
+>>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
                             const userEmail = userProfileResponse.data.email;
                             console.log(response.data);
                             const wrongAnswer = totalQuestions - score;
@@ -176,7 +192,11 @@ const Quiz = () => {
                                 message: emailMessage
                             };
 
+<<<<<<< HEAD
                             await axios.post(`http://localhost:8080/mail/send/${userEmail}`, mailStructure);
+=======
+                            await axios.post(`https://quiz-app-backend-production-1b1c.up.railway.app/mail/send/${userEmail}`, mailStructure);
+>>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
                             // Alert the user to check their email
                             Swal.fire({
                                 icon: 'info',

@@ -22,7 +22,11 @@ export default function ButtonAppBar() {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
+<<<<<<< HEAD
             <AppBar position="static" sx={{ backgroundColor: '#1976D2' }}>
+=======
+            <AppBar position="static" sx={{ backgroundColor: '#4a148c' }}>
+>>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
                 <Toolbar>
                     <IconButton
                         size="large"
@@ -34,8 +38,13 @@ export default function ButtonAppBar() {
                     >
                         <MenuIcon />
                     </IconButton>
+<<<<<<< HEAD
                     <Typography variant="h4" component="div" sx={{ flexGrow: 1, color: 'white', fontFamily: 'cursive', fontSize: '2.5rem' }}>
                         LearnHub {/* Updated typography */}
+=======
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: 'white' }}>
+                        Quiz Application
+>>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
                     </Typography>
                 </Toolbar>
             </AppBar>

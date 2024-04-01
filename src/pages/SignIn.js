@@ -3,6 +3,10 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
+<<<<<<< HEAD
+=======
+import Link from '@mui/material/Link';
+>>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
 import {Link as RouterLink, useNavigate} from 'react-router-dom';
 
 import Grid from '@mui/material/Grid';
@@ -17,8 +21,25 @@ import Swal from 'sweetalert2'
 
 
 
+<<<<<<< HEAD
 
 
+=======
+function Copyright(props) {
+    return (
+        <Typography variant="body2" color="text.secondary" align="center" {...props}>
+            {'Copyright © '}
+            <Link color="inherit" href="https://github.com/ruturaj220">
+                Your Website
+            </Link>{' '}
+            {new Date().getFullYear()}
+            {'.'}
+        </Typography>
+    );
+}
+
+// TODO remove, this demo shouldn't need to reset the theme.
+>>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
 
 const defaultTheme = createTheme();
 
@@ -34,7 +55,11 @@ const SignIn = () => {
         event.preventDefault();
 
         try {
+<<<<<<< HEAD
             const response = await axios.post("http://localhost:8080/login", {
+=======
+            const response = await axios.post("https://quiz-app-backend-production-1b1c.up.railway.app/login", {
+>>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
                 username: username,
                 password: password,
             });
@@ -133,6 +158,10 @@ const SignIn = () => {
                         </Grid>
                     </Box>
                 </Box>
+<<<<<<< HEAD
+=======
+                <Copyright sx={{ mt: 8, mb: 4 }} />
+>>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
             </Container>
         </ThemeProvider>
     );

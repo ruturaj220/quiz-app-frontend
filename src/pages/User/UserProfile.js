@@ -71,7 +71,11 @@ function UserProfile() {
 
     useEffect(() => {
         axios
+<<<<<<< HEAD
             .get(`http://localhost:8080/user/${username}`)
+=======
+            .get(`https://quiz-app-backend-production-1b1c.up.railway.app/user/${username}`)
+>>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
             .then((response) => {
                 setUserData(response.data);
             })
@@ -91,7 +95,11 @@ function UserProfile() {
 
     const handleSaveClick = () => {
         axios
+<<<<<<< HEAD
             .put(`http://localhost:8080/user/${userData.userId}`, editedData)
+=======
+            .put(`https://quiz-app-backend-production-1b1c.up.railway.app/user/${userData.userId}`, editedData)
+>>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
             .then((response) => {
                 setUserData({ ...userData, ...editedData });
                 setIsEditing(false);

@@ -7,7 +7,11 @@ const UserList = () => {
 
     useEffect(() => {
         axios
+<<<<<<< HEAD
             .get('http://localhost:8080/user/getAllUser')
+=======
+            .get('https://quiz-app-backend-production-1b1c.up.railway.app/user/getAllUser')
+>>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
             .then((response) => {
                 setUsers(response.data);
             })
@@ -27,7 +31,11 @@ const UserList = () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 axios
+<<<<<<< HEAD
                     .delete(`http://localhost:8080/user/${userId}`)
+=======
+                    .delete(`https://quiz-app-backend-production-1b1c.up.railway.app/user/${userId}`)
+>>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
                     .then(() => {
                         setUsers(users.filter((user) => user.userId !== userId));
                         Swal.fire({

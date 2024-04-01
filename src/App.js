@@ -16,11 +16,14 @@ import UserProfile from "./pages/User/UserProfile";
 import Quiz from "./pages/User/Quiz";
 import UserList from "./pages/Admin/UserList";
 import ForgotPassword from "./pages/ForgotPassword";
+<<<<<<< HEAD
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import RefundCancellationPolicy from "./pages/RefundCancellationPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+=======
+>>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
 
 function App() {
   function NonAdminLayout() {
@@ -43,18 +46,25 @@ function App() {
   return (
 
       <div>
+<<<<<<< HEAD
         <Router>
+=======
+        <Router basename="/quiz-app-frontend">
+>>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
           <Routes>
             <Route path="/" element={<NonAdminLayout />}>
               {/* Non-admin routes */}
                 <Route index element={<Home />} />
                 <Route path="signUp" element={<SignUp />} />
                 <Route path="signIn" element={<SignIn />} />
+<<<<<<< HEAD
                 <Route path="privacyPolicy" element={<PrivacyPolicy/>}/>
                 <Route path="RefundCancellationPolicy" element={<RefundCancellationPolicy/>}/>
                 <Route path="TermsAndConditions" element={<TermsAndConditions/>}/>
                 <Route path="contactUs" element={<Contact/>}/>
                 <Route path="aboutUs" element={<About/>}/>
+=======
+>>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
                 <Route path="forgotPassword" element={<ForgotPassword/>}/>
             </Route>
             <Route path="/admin" element={<AdminDashboard />}>
