@@ -25,11 +25,7 @@ export const ShowQuestions = () => {
     const fetchQuestions = async () => {
         try {
             const response = await axios.get(
-<<<<<<< HEAD
                 "http://localhost:8080/question/allQuestions"
-=======
-                "https://quiz-app-backend-production-1b1c.up.railway.app/question/allQuestions"
->>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
             );
 
             if (response.status === 200) {
@@ -69,11 +65,7 @@ export const ShowQuestions = () => {
             });
 
             if (result.isConfirmed) {
-<<<<<<< HEAD
                 await axios.delete(`http://localhost:8080/question/${id}`);
-=======
-                await axios.delete(`https://quiz-app-backend-production-1b1c.up.railway.app/question/${id}`);
->>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
                 await Swal.fire(
                     'Deleted!',
                     'Your file has been deleted.',
@@ -99,11 +91,7 @@ export const ShowQuestions = () => {
     const handleUpdateQuestion = async (updatedQuestion) => {
         try {
             await axios.put(
-<<<<<<< HEAD
                 `http://localhost:8080/question/${updatedQuestion.id}`,
-=======
-                `https://quiz-app-backend-production-1b1c.up.railway.app/question/${updatedQuestion.id}`,
->>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
                 updatedQuestion
             );
             fetchQuestions(); // Refresh the question list

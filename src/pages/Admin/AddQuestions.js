@@ -37,11 +37,7 @@ const AddQuestions = () => {
         };
 
         try {
-<<<<<<< HEAD
             const response = await axios.post('http://localhost:8080/question/addQuestion', newQuestion);
-=======
-            const response = await axios.post('https://quiz-app-backend-production-1b1c.up.railway.app/question/addQuestion', newQuestion);
->>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
 
             if (response.status === 201) {
                 // Question created successfully

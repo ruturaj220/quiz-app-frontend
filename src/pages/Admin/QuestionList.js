@@ -20,11 +20,7 @@ function QuestionList() {
     useEffect(() => {
         // Fetch questions for the specified quiz ID when the component mounts
         axios
-<<<<<<< HEAD
             .get(`http://localhost:8080/quiz/getQuizQuestion/${quizId}`)
-=======
-            .get(`https://quiz-app-backend-production-1b1c.up.railway.app/quiz/getQuizQuestion/${quizId}`)
->>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
             .then((response) => {
                 setQuestions(response.data);
             })

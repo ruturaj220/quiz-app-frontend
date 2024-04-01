@@ -26,11 +26,7 @@ const ForgotPassword = () => {
     };
     const handleSendOTP = async () => {
         try {
-<<<<<<< HEAD
             const response = await axios.get(`http://localhost:8080/mail/forgotPassword/${email}`);
-=======
-            const response = await axios.get(`https://quiz-app-backend-production-1b1c.up.railway.app/mail/forgotPassword/${email}`);
->>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
             // Handle response
 
             console.log(response);
@@ -55,11 +51,7 @@ const ForgotPassword = () => {
             return;
         }
         try {
-<<<<<<< HEAD
             const response = await axios.put(`http://localhost:8080/mail/updatePassword?email=${email}&otp=${otp}&newPassword=${newPassword}`);
-=======
-            const response = await axios.put(`https://quiz-app-backend-production-1b1c.up.railway.app/mail/updatePassword?email=${email}&otp=${otp}&newPassword=${newPassword}`);
->>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
             console.log(response.data);
             Swal.fire({
                 icon: 'success',

@@ -16,76 +16,66 @@ import UserProfile from "./pages/User/UserProfile";
 import Quiz from "./pages/User/Quiz";
 import UserList from "./pages/Admin/UserList";
 import ForgotPassword from "./pages/ForgotPassword";
-<<<<<<< HEAD
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import RefundCancellationPolicy from "./pages/RefundCancellationPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
-=======
->>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
 
 function App() {
-  function NonAdminLayout() {
-    return (
-        <div>
-          <Navbar />
-          <Outlet />
-        </div>
-    );
-  }
+    function NonAdminLayout() {
+        return (
+            <div>
+                <Navbar />
+                <Outlet />
+            </div>
+        );
+    }
     function UserLayout() {
         const { username } = useParams();
         return (
             <div>
-               <UserDashboard username={username}/>
+                <UserDashboard username={username}/>
             </div>
         );
     }
 
-  return (
+    return (
 
-      <div>
-<<<<<<< HEAD
-        <Router>
-=======
-        <Router basename="/quiz-app-frontend">
->>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
-          <Routes>
-            <Route path="/" element={<NonAdminLayout />}>
-              {/* Non-admin routes */}
-                <Route index element={<Home />} />
-                <Route path="signUp" element={<SignUp />} />
-                <Route path="signIn" element={<SignIn />} />
-<<<<<<< HEAD
-                <Route path="privacyPolicy" element={<PrivacyPolicy/>}/>
-                <Route path="RefundCancellationPolicy" element={<RefundCancellationPolicy/>}/>
-                <Route path="TermsAndConditions" element={<TermsAndConditions/>}/>
-                <Route path="contactUs" element={<Contact/>}/>
-                <Route path="aboutUs" element={<About/>}/>
-=======
->>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
-                <Route path="forgotPassword" element={<ForgotPassword/>}/>
-            </Route>
-            <Route path="/admin" element={<AdminDashboard />}>
-              {/* Admin routes */}
-                <Route path="profile" element={<AdminProfile />} />
-                <Route path="addQuestions" element={<AddQuestions />} />
-                <Route path="allQuestions" element={<ShowQuestions />} />
-                <Route path="quizGenerate" element={<QuizGenerate/>}/>
-                <Route path="quizList1" element={<QuizList1 />}/>
-                <Route path="quiz/:quizId/questions" element={<QuestionList/>} />
-                <Route path="getAllUser" element={<UserList />}/>
-            </Route>
-              <Route path="/user/:username" element={<UserLayout/>}>
-                  {/*{User routes}*/}
-                  <Route path="profile" element={<UserProfile />}/>
-                  <Route path="quiz" element={<Quiz/>}/>
-              </Route>
-          </Routes>
-        </Router>
-      </div>
-  );
+        <div>
+            <Router>
+                <Routes>
+                    <Route path="/" element={<NonAdminLayout />}>
+                        {/* Non-admin routes */}
+                        <Route index element={<Home />} />
+                        <Route path="signUp" element={<SignUp />} />
+                        <Route path="signIn" element={<SignIn />} />
+                        <Route path="privacyPolicy" element={<PrivacyPolicy/>}/>
+                        <Route path="RefundCancellationPolicy" element={<RefundCancellationPolicy/>}/>
+                        <Route path="TermsAndConditions" element={<TermsAndConditions/>}/>
+                        <Route path="contactUs" element={<Contact/>}/>
+                        <Route path="aboutUs" element={<About/>}/>
+                        <Route path="forgotPassword" element={<ForgotPassword/>}/>
+                    </Route>
+                    <Route path="/admin" element={<AdminDashboard />}>
+                        {/* Admin routes */}
+                        <Route path="profile" element={<AdminProfile />} />
+                        <Route path="addQuestions" element={<AddQuestions />} />
+                        <Route path="allQuestions" element={<ShowQuestions />} />
+                        <Route path="quizGenerate" element={<QuizGenerate/>}/>
+                        <Route path="quizList1" element={<QuizList1 />}/>
+                        <Route path="quiz/:quizId/questions" element={<QuestionList/>} />
+                        <Route path="getAllUser" element={<UserList />}/>
+                    </Route>
+                    <Route path="/user/:username" element={<UserLayout/>}>
+                        {/*{User routes}*/}
+                        <Route path="profile" element={<UserProfile />}/>
+                        <Route path="quiz" element={<Quiz/>}/>
+                    </Route>
+                </Routes>
+            </Router>
+        </div>
+    );
 }
 
 export default App;

@@ -12,11 +12,7 @@ function QuizGenerate() {
 
     const fetchCategories = useCallback(async () => {
         try {
-<<<<<<< HEAD
             const response = await axios.get('http://localhost:8080/question/allQuestions');
-=======
-            const response = await axios.get('https://quiz-app-backend-production-1b1c.up.railway.app/question/allQuestions');
->>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
             const allCategories = response.data.map((question) => question.category);
             const uniqueCategories = [...new Set(allCategories)]; // Using Set to get unique values
             setCategories(uniqueCategories);
@@ -82,11 +78,7 @@ function QuizGenerate() {
 
         try {
             const response = await axios.post(
-<<<<<<< HEAD
                 `http://localhost:8080/quiz/create?category=${selectedCategory}&numQ=${numQ}&quizTitle=${quizTitle}`
-=======
-                `https://quiz-app-backend-production-1b1c.up.railway.app/quiz/create?category=${selectedCategory}&numQ=${numQ}&quizTitle=${quizTitle}`
->>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
             );
 
             if (response.status === 201) {

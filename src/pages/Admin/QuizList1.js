@@ -77,11 +77,7 @@ function QuizList1() {
 
     useEffect(() => {
         axios
-<<<<<<< HEAD
             .get('http://localhost:8080/quiz/getAllQuiz')
-=======
-            .get('https://quiz-app-backend-production-1b1c.up.railway.app/quiz/getAllQuiz')
->>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
             .then((response) => {
                 setQuizzes(response.data);
             })
@@ -101,11 +97,7 @@ function QuizList1() {
         }).then((result) => {
             if (result.isConfirmed) {
                 axios
-<<<<<<< HEAD
                     .delete(`http://localhost:8080/quiz/deleteQuiz/${id}`)
-=======
-                    .delete(`https://quiz-app-backend-production-1b1c.up.railway.app/quiz/deleteQuiz/${id}`)
->>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
                     .then(() => {
                         setQuizzes((prevQuizzes) => prevQuizzes.filter((quiz) => quiz.id !== id));
                         Swal.fire('Deleted!', 'Your quiz has been deleted.', 'success');
@@ -127,11 +119,7 @@ function QuizList1() {
 
     const handleSaveEdit = () => {
         axios
-<<<<<<< HEAD
             .put(`http://localhost:8080/quiz/update/${editingQuizId}`, { quizTitle: editedQuizTitle })
-=======
-            .put(`https://quiz-app-backend-production-1b1c.up.railway.app/quiz/update/${editingQuizId}`, { quizTitle: editedQuizTitle })
->>>>>>> ec424c48beb9050062d0efaa721c116605bd3350
             .then(() => {
                 setIsEditModalOpen(false);
                 const updatedQuizzes = quizzes.map((quiz) =>
