@@ -1,5 +1,6 @@
 {
   "name": "quiz-app",
+  "homepage": "https://ruturaj220.github.io/quiz-app-frontend",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
@@ -45,5 +46,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
   }
 }
